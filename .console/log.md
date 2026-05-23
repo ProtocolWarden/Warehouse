@@ -58,3 +58,7 @@ All 13 Python source and test files had "Copyright (C) 2024 Dave Velasco. All ri
 ## 2026-05-13 — Track .console source files
 
 - Fixed gitignore now exposes task.md, guidelines.md, backlog.md as trackable
+
+## 2026-05-23 — Standardize pre-push hook
+
+- Updated `.hooks/pre-push` to the auto-discovering boundary-artifact variant (auto-locates PrivateManifest/dist artifact; extra custodian-multi fallback path).
