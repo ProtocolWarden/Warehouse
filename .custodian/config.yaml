@@ -3,6 +3,8 @@ src_root: provision
 tests_root: tests
 
 audit:
+  reconcile_enforce: true
+
   cross_repo:
     platform_manifest_repo: ../PlatformManifest
 

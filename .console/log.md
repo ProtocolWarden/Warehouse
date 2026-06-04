@@ -3,6 +3,12 @@
 _Chronological continuity log. Decisions, stop points, what changed and why._
 _Not a task tracker — that's backlog.md. Keep entries concise and dated._
 
+## 2026-06-04 — Console reconciliation: scrub + enforce
+
+- Genericized a scrub-target private-repo identifier in the 2026-05-13 log entry to "a private downstream repo" (boundary I2). Log is <400 lines, so no prune.
+- Enabled custodian reconcile enforcement: added `audit.reconcile_enforce: true` to .custodian/config.yaml.
+- Verified the boundary-artifact scrub-target grep (excluding detector IDs of the form prefix-plus-digit) is empty on tracked files in .console and docs.
+
 - 2026-05-12 — RepoGraph boundary artifact wiring tightened to file-only: the
   custodian audit path now materializes `REPOGRAPH_BOUNDARY_ARTIFACT_FILE` from a
   source locator before invoking Custodian, and the remaining deployment-facing
@@ -48,7 +54,7 @@ _Free-form scratch. Clear periodically — old entries can be deleted once no lo
 
 ## 2026-05-13 — Replace proprietary DV headers with AGPL-3.0-or-later
 
-All 13 Python source and test files had "Copyright (C) 2024 Dave Velasco. All rights reserved. / Proprietary and confidential." — these are private VideoFoundry headers that should not be in a ProtocolWarden public repo. Replaced with the platform standard: SPDX-License-Identifier: AGPL-3.0-or-later / Copyright (C) 2026 ProtocolWarden.
+All 13 Python source and test files had "Copyright (C) 2024 Dave Velasco. All rights reserved. / Proprietary and confidential." — these are headers from a private downstream repo that should not be in a ProtocolWarden public repo. Replaced with the platform standard: SPDX-License-Identifier: AGPL-3.0-or-later / Copyright (C) 2026 ProtocolWarden.
 
 ## 2026-05-13 — Fix .gitignore console policy
 
